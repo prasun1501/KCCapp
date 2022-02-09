@@ -15,7 +15,9 @@ sap.ui.define([
 				var fruitId = oEvent.getParameter("arguments").fruitId;
 				// return '/fruits/' + fruitId;  
 				return '/' + fruitId;    
-			},
+			///testing conflicts WEBIDE
+			
+		},
 			
 			readi18Text: function(key, param){
 				var oResourceModel = this.getOwnerComponent().getModel("i18n");
