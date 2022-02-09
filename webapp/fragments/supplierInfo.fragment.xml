@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+	<f:SimpleForm>
+		<Label text="Supplier ID"/>
+		<Text text="{N_PRODUCT_TO_SUPPLIER/BP_ID}"/>
+		<Label text="BP Role" class="sapUiSmallMarginTop"/>
+		<Text text="{N_PRODUCT_TO_SUPPLIER/BP_ROLE}" class="sapUiSmallMarginTop"/>
+		<Label text="Email"/>
+		<Text text="{N_PRODUCT_TO_SUPPLIER/EMAIL_ADDRESS}"/>
+		<Label text="Company Name"/>
+		<Text text="{N_PRODUCT_TO_SUPPLIER/COMPANY_NAME}" />
+		<Label text="Country"/>
+		<Text text="{N_PRODUCT_TO_SUPPLIER/COUNTRY}" />
+	</f:SimpleForm>
+</core:FragmentDefinition>

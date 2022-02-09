@@ -1,0 +1,80 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="KCC.controller.View2"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<!--<App>-->
+	<!--	<pages>-->
+	<Page title="View2" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<ObjectHeader intro="{DESCRIPTION}" title="{PRODUCT_ID}" icon="sap-icon://product"
+				number="{parts:[{path:'PRICE'},{path:'CURRENCY_CODE'}], formatter:'.formatter.formatCurrency'}" numberUnit="{CURRENCY_CODE}"></ObjectHeader>
+		</content>
+		<IconTabBar id="idIconTabBar" select=".onFilterSelect" class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter text="More Info" iconColor="Positive" icon="sap-icon://supplier">
+					<core:Fragment fragmentName="KCC.fragments.moreInfo" type="XML"/>
+					<core:Fragment fragmentName="KCC.fragments.supplierInfo" type="XML" />
+				</IconTabFilter>
+				<IconTabSeparator/>
+				<IconTabFilter text="Supplier" icon="sap-icon://display">
+					<Table items="{/supplier}" id ="idSuppliersList">
+						<headerToolbar>
+							<Toolbar>
+								<ToolbarSpacer></ToolbarSpacer>
+								<Button text="Filter" press="onFilter"></Button>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column>
+								<header>
+									<Text text="Name"/>
+								</header>
+							</Column>
+							<Column>
+								<header>
+									<Text text="City"/>
+								</header>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<header>
+									<Text text="Since When"/>
+								</header>
+							</Column>
+							<Column>
+								<header>
+									<Text text="Contact No"/>
+								</header>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<Text text="{name}"/>
+								<Input value="{city}" showValueHelp="true" valueHelpRequest="onF4Help"/>
+								<Text text="{sinceWhen}"/>
+								<Link text="{person}" press="onLinkPress"/>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</IconTabFilter>
+				<IconTabFilter text="Cities" icon="sap-icon://camera">
+					<Select items="{/cities}">
+						<core:Item text="{cityName}" key="{cityName}"/>
+					</Select>
+					<ComboBox items="{/cities}">
+						<core:Item text="{cityName}" key="{cityName}"/>
+					</ComboBox>
+					<MultiComboBox items="{/cities}">
+						<core:Item text="{cityName}" key="{cityName}"/>
+					</MultiComboBox>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button text="Add to cart"></Button>
+				<Button text="Cancel" press="onBack"></Button>
+			</Toolbar>
+		</footer>
+	</Page>
+	<!--	</pages>-->
+	<!--</App>-->
+</mvc:View>

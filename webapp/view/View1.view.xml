@@ -1,0 +1,27 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="KCC.controller.View1">
+	<Page title="View1">
+		<headerContent>
+			<Button text="Next" press="onNext"/>
+		</headerContent>
+		<content>
+			<SearchField id="idSearch" search="onSearch" liveChange="onSearch" placeholder="Search by Category"/>
+			<List id="idList" mode="SingleSelectMaster" selectionChange="onItemClick" items="{path: '/ProductSet'}">
+				<items>
+					<ObjectListItem intro="{PRODUCT_ID}" title="{NAME}" number="{PRICE}" numberUnit="{CURRENCY_CODE}" icon="sap-icon://product">
+						<attributes>
+							<ObjectAttribute title="Category" text="{CATEGORY}"/>
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+	<footer>
+	    <Toolbar width="100%" id="__toolbar1">
+	        <content>
+	            <ToolbarSpacer id="__spacer0"/>
+	            <Button text="Create Product" width="100px" id="iDcREATE" icon="sap-icon://create" press="onCreateProduct" type="Emphasized"/>
+	        </content>
+	    </Toolbar>
+	</footer>
+	</Page>
+</mvc:View>

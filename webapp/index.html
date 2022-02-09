@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>this is UI5 training</title>
+    <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+      type="text/javascript"
+        data-sap-ui-theme="sap_fiori_3_dark" 
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-xx-bindingSyntax="complex"
+        data-sap-ui-resourceroots='{
+                    "KCC" : "./"
+                }' >
+    	
+    </script>
+    <script>
+     //var oAppView = new sap.ui.view("idAppView", {
+     //	viewName:'KCC.view.App',
+     //	type:"XML"
+     //});
+     
+     //oAppView.placeAt("content");
+     debugger;
+       var oCompContainer = new sap.ui.core.ComponentContainer({
+                name: "KCC"
+            });
+
+            oCompContainer.placeAt("content");
+     
+     
+    </script>
+
+</head>
+<body class="sapUiBody" role="application" >
+	<div id="content"></div>
+</body>

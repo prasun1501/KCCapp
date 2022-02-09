@@ -1,0 +1,9 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="mySelectDialog"
+		noDataText="No Data Found" search="onSearchPopup" confirm="onConfirm" rememberSelections="true">
+		
+	</SelectDialog>
+</core:FragmentDefinition>

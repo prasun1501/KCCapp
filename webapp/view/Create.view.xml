@@ -1,0 +1,33 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml" controllerName="KCC1.controller.Create">
+	<Page title="Create Product">
+		<VBox class="sapUiSmallMargin">
+			<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Address" labelSpanXL="3" labelSpanL="3"
+				labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+				columnsL="1" columnsM="1" singleContainerFullSize="false">
+				<f:content>
+					<Label text="Product Id"/>
+					<Input value="{createModel>/productData/PRODUCT_ID}" submit="onEnter" id="idPRODCreate"/>
+					<Button icon="sap-icon://display" tooltip="Get Most expensive product" press="onMostExp"/>
+					<Label text="Description"/>
+					<Input value="{createModel>/productData/DESCRIPTION}"></Input>
+					<Label text="Supplier ID"/>
+					<Input value="{createModel>/productData/SUPPLIER_ID}"></Input>
+					<Label text="Price/Currency"/>
+					<Input type="Number" value="{createModel>/productData/PRICE}"></Input>
+					<Input value="{createModel>/productData/CURRENCY_CODE}"></Input>
+				</f:content>
+			</f:SimpleForm>
+		</VBox>
+		<footer>
+			<Toolbar width="100%">
+				<content>
+					<ToolbarSpacer/>
+					<Button text="Save" id="iDcREATE" icon="sap-icon://save" press="onSave"/>
+					<Button icon="sap-icon://clear-all" press="onClear"/>
+					<Button icon="sap-icon://delete" press="onDelete"/>
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
