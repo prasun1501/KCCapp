@@ -12,7 +12,7 @@ sap.ui.define([
 		getPath: function(oEvent) {
             //  testing Git
             // TESTING AGAIN WEBIDE
-            //TEST FROM BAS 2ND TIME  --- this WEBIDE pushing 3rd time
+            //TEST FROM BAS 2ND TIME  --- this BAS pushing 3rd time
 				var fruitId = oEvent.getParameter("arguments").fruitId;
 				// return '/fruits/' + fruitId;  
 				return '/' + fruitId;    
@@ -62,4 +62,8 @@ sap.ui.define([
 
 	});
 
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> branch 'main' of https://github.com/prasun1501/KCCapp.git
