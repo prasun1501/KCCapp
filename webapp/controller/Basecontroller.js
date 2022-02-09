@@ -12,6 +12,7 @@ sap.ui.define([
 		getPath: function(oEvent) {
             //  testing Git
             // TESTING AGAIN WEBIDE
+            //TEST FROM BAS 2ND TIME
 				var fruitId = oEvent.getParameter("arguments").fruitId;
 				// return '/fruits/' + fruitId;  
 				return '/' + fruitId;    
