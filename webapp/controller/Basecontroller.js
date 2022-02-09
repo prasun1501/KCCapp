@@ -10,6 +10,7 @@ sap.ui.define([
 		// 	return sap.ui.getCore().byId("idAppView--myApp");
 		// }
 		getPath: function(oEvent) {
+            //  testing Git
 				var fruitId = oEvent.getParameter("arguments").fruitId;
 				// return '/fruits/' + fruitId;  
 				return '/' + fruitId;    
